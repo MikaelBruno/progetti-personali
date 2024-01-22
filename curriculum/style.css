@@ -1,0 +1,12 @@
+:root {
+    --colore-jet: #39393A;
+    --colore-platinum: #E6E6E6;
+    --colore-satinGold: #B7990D;
+    --colore-bittersweet: #EB5E55;
+    --colore-eggplant: #75485E;
+  }
+body {
+    padding: 0px;
+    margin: 0px;
+    background-color: var(--colore-jet) ;
+}
