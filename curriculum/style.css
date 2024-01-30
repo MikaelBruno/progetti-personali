@@ -1,12 +1,31 @@
 :root {
-    --colore-jet: #39393A;
-    --colore-platinum: #E6E6E6;
-    --colore-satinGold: #B7990D;
-    --colore-bittersweet: #EB5E55;
+    --colore-body: #E6E6E6; 
+    --colore-font: #E6E6E6;
+    --colore-navbar: #39393A;
+    --colore-fontnavbar: #FFFCF7;
     --colore-eggplant: #75485E;
   }
 body {
     padding: 0px;
     margin: 0px;
-    background-color: var(--colore-jet) ;
+    background-color: var(--colore-body) ;
+}
+.container-navbar {
+  background: var(--colore-navbar);
+  color: var(--colore-fontnavbar);
+  padding: 10px;
+}
+ul {
+  list-style: none;
+  display: flex;
+  gap: 40px; /* Spaziatura predefinita */
+}
+.prova{
+  color: black;
+  padding-top: 100px ;
+}
+@media (max-width: 768px) {
+  ul {
+      gap: 10px; /* Riduci lo spaziamento su schermi più piccoli */
+  }
 }
