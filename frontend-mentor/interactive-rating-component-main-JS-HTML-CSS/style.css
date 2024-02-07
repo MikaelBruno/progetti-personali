@@ -1,10 +1,12 @@
 :root {
     --VeryDarkBlue: hsl(216, 12%, 8%);
-    --DarkBlue: hsl(213, 19%, 18%);
+    --DarkBlueOpaco: rgb(38, 47, 56);
+    --DarkBlue: rgb(32, 39, 49);
     --MediumGrey: hsl(216, 12%, 54%);
     --LightGrey: hsl(217, 12%, 63%);
     --White: hsl(0, 0%, 100%);
-    --Orange: hsl(25, 97%, 53%)
+    --Orange: hsl(25, 97%, 53%);
+    --yellow: #EFCA08;
 }
 
 .overpass{
@@ -23,9 +25,11 @@ body{
     margin: 0;
     color: var(--White);
 }
+
 p {
     font-size: 15px;
 }
+
 @media (min-width:375px) {
     .card-review{
         width: 70%;
@@ -34,44 +38,44 @@ p {
 
 @media (min-width:570px) {
     .card-review{
-        width: 70%;
+        width: 55%;
     }
 }
 
 @media (min-width:768px) {
     .card-review{
-        width: 50%;
+        width: 45%;
     }
 }
 
 @media (min-width:960px) {
     .card-review{
-        width: 35%;
+        width: 30%;
     }
 }
 
 @media (min-width:1200px) {
     .card-review{
-        width: 30%;
+        width: 25%;
     }
 }
 @media (min-width:1440px) {
     .card-review{
-        width: 25%;
+        width: 20%;
     }
 }
 .card-review{
     background-color: var(--DarkBlue);
-    height: 50vh;
+    height: 52vh;
     border-radius: 10px;
     margin: auto;
-    padding-top: 25px;
+    padding-top: 30px;
     padding-left: 5%;
     padding-right: 5%;
 }
 
 .card-icon-star img{
-    background-color: var(--LightGrey);
+    background-color: var(--DarkBlueOpaco);
     height: 15px;
     border-radius: 100%;
     padding: 10px;
@@ -85,13 +89,11 @@ p {
     display: flex;
     list-style: none;
     list-style-type: none;
-    
     padding-left: 0px;
     justify-content: space-between;
 }
 
-.card-rating ul li{
-    background-color: var(--MediumGrey);
+.star{
     height: 45px;
     width: 45px;
     border-radius: 50%;
@@ -99,16 +101,58 @@ p {
     line-height: 45px;
 }
 
+.star-unselected {
+    background-color: var(--DarkBlueOpaco);
+}
+
+.star-selected{
+    background-color: var(--LightGrey);
+}
+
+.card-rating ul li:hover{
+    background-color: var(--LightGrey);
+    transition: 0.5s;
+}
+
 .card-submit{
+    padding-top: 10px;
     display: flex;
     justify-content: center;
     text-align: center;
 }
+
 .card-submit p{
     margin-top: 0px;
     width: 90%;
     border-radius: 25px;
-    background-color:var(--Orange); 
     padding-top: 15px;
     padding-bottom: 15px;
+}
+
+.submit-unselected{
+    background-color:var(--MediumGrey); 
+}
+
+.submit{
+    background-color:var(--Orange)
+}
+
+.div-bottom, .div-top {
+    height: 50%;
+    box-sizing: border-box;
+    align-items: center;
+    text-align: center;
+    font-family: "Overpass", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.score-text{
+    color: var(--Orange);
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 25px;
+    background-color: var(--DarkBlueOpaco);
+    
 }
